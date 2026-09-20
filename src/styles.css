@@ -234,7 +234,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   display: block;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.85rem, 4.2vw, 4.4rem);
+  font-size: clamp(1.5rem, 3.4vw, 3.5rem);
   line-height: 0.88;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -292,7 +292,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   .hero-stage { flex-direction: column; min-height: 760px; }
   .hero-panel { min-height: 348px; padding: 4.5rem 1.25rem 2rem; }
   .hero-panel-active, .hero-panel-idle { flex-grow: 1; }
-  .hero-title { font-size: clamp(1.6rem, 7.8vw, 2.6rem); }
+  .hero-title { font-size: clamp(1.3rem, 6.2vw, 2.1rem); }
   .hero-index { top: 2rem; }
 }
 
