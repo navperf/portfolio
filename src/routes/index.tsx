@@ -6,29 +6,81 @@ import { Button } from "@/components/ui/button";
 type WorkMode = "personal" | "perficient";
 
 const projects = [
-  { title: "Project title", description: "A short description of the problem, solution, and technologies used.", href: "https://github.com/" },
-  { title: "Project title", description: "A short description of the problem, solution, and technologies used.", href: "https://github.com/" },
-  { title: "Project title", description: "A short description of the problem, solution, and technologies used.", href: "https://github.com/" },
+  {
+    title: "CLI Tool (Command-Line Utility): Control and Manage Queues",
+    description:
+      "Built a lightweight CLI-based queue management tool using Golang. Enabled efficient task handling and monitoring through command-driven controls. Improved operational visibility for managing background job workflows.",
+    href: "https://github.com/",
+    year: "2026",
+  },
+  {
+    title: "One Digest – AI-Powered Newsletter App",
+    description:
+      "Developed an AI-powered newsletter platform for personalized content curation. Built using Flutter and Firebase. Integrated OpenRouter AI models and SendGrid automation. Delivered personalized content, AI-generated summaries, and dynamic newsletters.",
+    href: "https://github.com/",
+    year: "2025",
+  },
+  {
+    title: "Distributed Server Architecture for Multiplayer Gaming",
+    description:
+      "Engineered a three-tier server architecture with matchmaking services and WebSockets. Implemented scalable state management for multiplayer gameplay. Reduced average RTT under heavy load from approximately 259 ms to 78 ms (~3× improvement). Demonstrated scalability and responsiveness for real-time gaming systems.",
+    href: "https://github.com/",
+    year: "2025",
+  },
+  {
+    title: "ML-Based Online Safety Dashboard for the Elderly",
+    description:
+      "Developed an ML-powered interactive dashboard focused on online safety awareness. Included dynamic visualizations, dataset exploration, and risk prediction capabilities. Generated personalized predictions with confidence scores.",
+    href: "https://github.com/",
+    year: "2024",
+  },
 ];
 
 const experience = [
-  { role: "Role / Company", dates: "Month YYYY — Month YYYY", description: "A short description of responsibilities, technologies, and outcomes." },
-  { role: "Role / Company", dates: "Month YYYY — Month YYYY", description: "A short description of responsibilities, technologies, and outcomes." },
+  {
+    role: "Programmer Analyst Trainee",
+    company: "Cognizant",
+    dates: "March 2026 – June 2026",
+    description:
+      "Designed and deployed a full-stack logistics management application using a microservices architecture.",
+  },
 ];
 
 const certifications = [
-  { name: "Certification title", issuer: "Issuing organization", date: "Expected Month YYYY", status: "Ongoing" },
-  { name: "Certification title", issuer: "Issuing organization", date: "Month YYYY", status: "Completed" },
-  { name: "Certification title", issuer: "Issuing organization", date: "Month YYYY", status: "Completed" },
+  {
+    name: "Certification title",
+    issuer: "Issuing organization",
+    date: "Expected Month YYYY",
+    status: "Ongoing",
+  },
+  {
+    name: "Certification title",
+    issuer: "Issuing organization",
+    date: "Month YYYY",
+    status: "Completed",
+  },
+  {
+    name: "Certification title",
+    issuer: "Issuing organization",
+    date: "Month YYYY",
+    status: "Completed",
+  },
 ];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Navjyoth Pradeep — Software Engineering Portfolio" },
-      { name: "description", content: "Software engineering projects, experience, and professional certifications by Navjyoth Pradeep." },
+      {
+        name: "description",
+        content:
+          "Software engineering projects, experience, and professional certifications by Navjyoth Pradeep.",
+      },
       { property: "og:title", content: "Navjyoth Pradeep — Software Engineering Portfolio" },
-      { property: "og:description", content: "Software engineering projects, experience, and professional certifications." },
+      {
+        property: "og:description",
+        content: "Software engineering projects, experience, and professional certifications.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -77,7 +129,10 @@ function Index() {
           }`}
         >
           {isDocked ? (
-            <div key="docked" className="island-morph-in flex items-center justify-between gap-3 sm:gap-6 w-full">
+            <div
+              key="docked"
+              className="island-morph-in flex items-center justify-between gap-3 sm:gap-6 w-full"
+            >
               <a
                 href="#top"
                 className="font-display text-[11px] sm:text-xs md:text-sm uppercase tracking-wider text-ink transition-colors duration-200 hover:text-electric whitespace-nowrap"
@@ -92,20 +147,35 @@ function Index() {
                   className="cv-pill-btn group inline-flex items-center gap-1.5 rounded-full border border-ink/15 bg-paper/80 px-2.5 py-1 sm:px-3 sm:py-1.5 font-mono text-[9px] sm:text-[11px] uppercase tracking-wider text-ink transition-all duration-200 hover:border-ink hover:bg-paper"
                   aria-label="Download CV (PDF)"
                 >
-                  <span><span className="hidden sm:inline">Download </span>CV</span>
-                  <span className="text-[10px] sm:text-xs transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true">⤓</span>
+                  <span>
+                    <span className="hidden sm:inline">Download </span>CV
+                  </span>
+                  <span
+                    className="text-[10px] sm:text-xs transition-transform duration-200 group-hover:translate-y-0.5"
+                    aria-hidden="true"
+                  >
+                    ⤓
+                  </span>
                 </a>
                 <a
                   href="#contact"
                   className="pill-cta group inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1 sm:px-3.5 sm:py-1.5 font-mono text-[9px] sm:text-[11px] uppercase tracking-wider text-paper transition-all duration-200 hover:bg-electric hover:shadow-md active:scale-95 whitespace-nowrap"
                 >
                   <span>Work with me</span>
-                  <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+                  <span
+                    className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
                 </a>
               </div>
             </div>
           ) : (
-            <div key="expanded" className="island-morph-in flex flex-col items-center text-center gap-4 sm:gap-5 w-full">
+            <div
+              key="expanded"
+              className="island-morph-in flex flex-col items-center text-center gap-4 sm:gap-5 w-full"
+            >
               <div className="flex flex-col items-center">
                 <a
                   href="#top"
@@ -114,7 +184,10 @@ function Index() {
                   Navjyoth Pradeep
                 </a>
                 <p className="mt-2 flex items-center justify-center gap-2 font-mono text-[10px] sm:text-xs uppercase tracking-wider text-ink/65">
-                  <span className="size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                  <span
+                    className="size-2 rounded-full bg-emerald-500 animate-pulse"
+                    aria-hidden="true"
+                  />
                   <span>Associate Technical Consultant</span>
                 </p>
               </div>
@@ -127,14 +200,24 @@ function Index() {
                   aria-label="Download CV (PDF)"
                 >
                   <span className="font-medium">Download CV</span>
-                  <span className="text-sm font-display transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true">⤓</span>
+                  <span
+                    className="text-sm font-display transition-transform duration-200 group-hover:translate-y-0.5"
+                    aria-hidden="true"
+                  >
+                    ⤓
+                  </span>
                 </a>
                 <a
                   href="#contact"
                   className="pill-cta group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-2.5 sm:px-6 sm:py-3 font-mono text-xs uppercase tracking-wider text-paper transition-all duration-200 hover:bg-electric hover:shadow-lg active:scale-95"
                 >
                   <span>Work with me</span>
-                  <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+                  <span
+                    className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
                 </a>
               </div>
             </div>
@@ -142,7 +225,10 @@ function Index() {
         </nav>
       </header>
 
-      <section id="top" className="hero-stage relative flex min-h-[680px] border-b-4 border-ink md:h-screen md:min-h-[680px]">
+      <section
+        id="top"
+        className="hero-stage relative flex min-h-[680px] border-b-4 border-ink md:h-screen md:min-h-[680px]"
+      >
         <Button
           type="button"
           variant="ghost"
@@ -152,7 +238,12 @@ function Index() {
         >
           <span className="hero-index left-5 md:left-8 flex items-center gap-1.5">
             01 / Personal
-            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span>
+            <span
+              className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              aria-hidden="true"
+            >
+              ↗
+            </span>
           </span>
           <span className="relative z-10 text-left max-w-full">
             <span className="hero-kicker">Projects + Experience</span>
@@ -169,7 +260,12 @@ function Index() {
         >
           <span className="hero-index right-5 text-right md:right-8 flex items-center justify-end gap-1.5">
             02 / @Perficient
-            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span>
+            <span
+              className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              aria-hidden="true"
+            >
+              ↗
+            </span>
           </span>
           <span className="relative z-10 text-right max-w-full">
             <span className="hero-kicker">Certifications</span>
@@ -182,9 +278,27 @@ function Index() {
         <div className="border-b border-paper/15 px-5 py-5 md:px-12">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-5">
             <p className="font-mono text-[10px] uppercase text-paper/60">Viewing / {mode}</p>
-            <div className="flex border border-paper/25" role="group" aria-label="Choose portfolio area">
-              <Button type="button" variant="ghost" onClick={() => setMode("personal")} className={`mode-button h-auto rounded-none hover:bg-paper hover:text-ink ${mode === "personal" ? "mode-button-active-light" : ""}`}>Personal</Button>
-              <Button type="button" variant="ghost" onClick={() => setMode("perficient")} className={`mode-button h-auto rounded-none border-l border-paper/25 hover:bg-[#075056] hover:text-paper ${mode === "perficient" ? "mode-button-active-blue" : ""}`}>@Perficient</Button>
+            <div
+              className="flex border border-paper/25"
+              role="group"
+              aria-label="Choose portfolio area"
+            >
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() => setMode("personal")}
+                className={`mode-button h-auto rounded-none hover:bg-paper hover:text-ink ${mode === "personal" ? "mode-button-active-light" : ""}`}
+              >
+                Personal
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() => setMode("perficient")}
+                className={`mode-button h-auto rounded-none border-l border-paper/25 hover:bg-[#075056] hover:text-paper ${mode === "perficient" ? "mode-button-active-blue" : ""}`}
+              >
+                @Perficient
+              </Button>
             </div>
           </div>
         </div>
@@ -196,12 +310,27 @@ function Index() {
         <div className="mx-auto flex max-w-7xl flex-col gap-12 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-5 font-mono text-[10px] uppercase text-electric">Contact me</p>
-            <h2 className="font-display text-5xl uppercase leading-[0.9] sm:text-7xl lg:text-8xl">Let&apos;s<br />connect.</h2>
+            <h2 className="font-display text-5xl uppercase leading-[0.9] sm:text-7xl lg:text-8xl">
+              Let&apos;s
+              <br />
+              connect.
+            </h2>
           </div>
           <div className="grid gap-3 font-mono text-xs uppercase md:text-right">
-            <a className="contact-item" href="mailto:your.email@example.com">Email ↗</a>
-            <a className="contact-item" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a className="contact-item" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a className="contact-item" href="mailto:your.email@example.com">
+              Email ↗
+            </a>
+            <a className="contact-item" href="https://github.com/" target="_blank" rel="noreferrer">
+              GitHub ↗
+            </a>
+            <a
+              className="contact-item"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
             <p className="mt-5 text-[9px] text-ink/45">© 2026 Navjyoth Pradeep</p>
           </div>
         </div>
@@ -216,9 +345,22 @@ function PersonalWork() {
       <CollapsibleSection number="01" title="Projects">
         <div className="grid gap-px bg-paper/20 md:grid-cols-3">
           {projects.map((project, index) => (
-            <a key={index} href={project.href} target="_blank" rel="noreferrer" className="project-card group bg-ink p-6 md:min-h-64">
-              <span className="font-mono text-[9px] uppercase text-paper/45">0{index + 1} / GitHub ↗</span>
-              <h3 className="mt-12 font-display text-2xl uppercase">{project.title}</h3>
+            <a
+              key={index}
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card group bg-ink p-6 md:min-h-64"
+            >
+              <span className="font-mono text-[9px] uppercase text-paper/45">
+                0{index + 1} / GitHub ↗
+              </span>
+              {project.year && (
+                <span className="mt-2 font-mono text-[9px] uppercase text-electric">
+                  {project.year}
+                </span>
+              )}
+              <h3 className="mt-6 font-display text-2xl uppercase">{project.title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-paper/65">{project.description}</p>
             </a>
           ))}
@@ -229,8 +371,13 @@ function PersonalWork() {
         <CollapsibleSection number="02" title="Experience">
           <div className="border-t border-paper/20">
             {experience.map((item, index) => (
-              <article key={index} className="experience-row grid gap-3 border-b border-paper/20 py-8 transition-colors duration-300 hover:bg-paper/5 md:grid-cols-[1fr_0.6fr_1.5fr] md:gap-10">
-                <h3 className="font-display text-xl uppercase transition-transform duration-300 md:group-hover:translate-x-1">{item.role}</h3>
+              <article
+                key={index}
+                className="experience-row grid gap-3 border-b border-paper/20 py-8 transition-colors duration-300 hover:bg-paper/5 md:grid-cols-[1fr_0.6fr_1.5fr] md:gap-10"
+              >
+                <h3 className="font-display text-xl uppercase transition-transform duration-300 md:group-hover:translate-x-1">
+                  {item.role} <span className="font-normal text-ink/60">at</span> {item.company}
+                </h3>
                 <p className="font-mono text-[10px] uppercase text-paper/55">{item.dates}</p>
                 <p className="text-sm leading-relaxed text-paper/70">{item.description}</p>
               </article>
@@ -249,15 +396,31 @@ function PerficientWork() {
         <div className="overflow-x-auto border-t border-paper/20">
           <table className="w-full min-w-[660px] border-collapse text-left">
             <thead className="font-mono text-[9px] uppercase text-paper/45">
-              <tr className="border-b border-paper/20"><th className="py-4 pr-6 font-normal">Certification</th><th className="py-4 pr-6 font-normal">Issuer</th><th className="py-4 pr-6 font-normal">Date</th><th className="py-4 font-normal">Status</th></tr>
+              <tr className="border-b border-paper/20">
+                <th className="py-4 pr-6 font-normal">Certification</th>
+                <th className="py-4 pr-6 font-normal">Issuer</th>
+                <th className="py-4 pr-6 font-normal">Date</th>
+                <th className="py-4 font-normal">Status</th>
+              </tr>
             </thead>
             <tbody>
               {certifications.map((item, index) => (
-                <tr key={index} className="cert-row border-b border-paper/20 transition-colors duration-300 hover:bg-paper/5">
+                <tr
+                  key={index}
+                  className="cert-row border-b border-paper/20 transition-colors duration-300 hover:bg-paper/5"
+                >
                   <td className="py-6 pr-6 font-display uppercase">{item.name}</td>
                   <td className="py-6 pr-6 text-sm text-paper/70">{item.issuer}</td>
-                  <td className="py-6 pr-6 font-mono text-[10px] uppercase text-paper/55">{item.date}</td>
-                  <td className="py-6"><span className={`status ${item.status === "Completed" ? "status-complete" : ""}`}>{item.status}</span></td>
+                  <td className="py-6 pr-6 font-mono text-[10px] uppercase text-paper/55">
+                    {item.date}
+                  </td>
+                  <td className="py-6">
+                    <span
+                      className={`status ${item.status === "Completed" ? "status-complete" : ""}`}
+                    >
+                      {item.status}
+                    </span>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -265,13 +428,25 @@ function PerficientWork() {
         </div>
       </CollapsibleSection>
       <section className="mt-14 border-t border-paper/20 pt-8 md:mt-20">
-        <p className="font-mono text-[10px] uppercase text-paper/45">More Perficient sections / To be added</p>
+        <p className="font-mono text-[10px] uppercase text-paper/45">
+          More Perficient sections / To be added
+        </p>
       </section>
     </div>
   );
 }
 
-function CollapsibleSection({ number, title, children, defaultOpen = false }: { number: string; title: string; children: React.ReactNode; defaultOpen?: boolean }) {
+function CollapsibleSection({
+  number,
+  title,
+  children,
+  defaultOpen = false,
+}: {
+  number: string;
+  title: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}) {
   const [open, setOpen] = useState(defaultOpen);
   const baseId = title.toLowerCase();
   const panelId = `${baseId}-panel`;
@@ -286,8 +461,13 @@ function CollapsibleSection({ number, title, children, defaultOpen = false }: { 
         className="collapsible-header group flex w-full cursor-pointer items-center justify-between gap-6 border-b border-paper/25 pb-6 text-left"
       >
         <span className="flex items-baseline gap-5 md:gap-8">
-          <span className="font-mono text-[10px] text-electric transition-all duration-300 group-hover:-translate-y-0.5">{number}</span>
-          <h2 id={`${baseId}-title`} className="font-display text-4xl uppercase transition-all duration-300 group-hover:translate-x-2 group-hover:text-electric sm:text-6xl">
+          <span className="font-mono text-[10px] text-electric transition-all duration-300 group-hover:-translate-y-0.5">
+            {number}
+          </span>
+          <h2
+            id={`${baseId}-title`}
+            className="font-display text-4xl uppercase transition-all duration-300 group-hover:translate-x-2 group-hover:text-electric sm:text-6xl"
+          >
             {title}
           </h2>
         </span>
@@ -295,12 +475,20 @@ function CollapsibleSection({ number, title, children, defaultOpen = false }: { 
           <span className="hidden font-mono text-[10px] uppercase tracking-wider text-paper/50 transition-colors duration-300 group-hover:text-paper sm:inline">
             {open ? "Collapse" : "Expand"}
           </span>
-          <span className={`collapsible-icon grid size-9 shrink-0 place-items-center border border-paper/30 font-display text-lg transition-all duration-300 group-hover:border-electric group-hover:bg-electric group-hover:text-paper ${open ? "collapsible-icon-open" : ""}`} aria-hidden="true">
+          <span
+            className={`collapsible-icon grid size-9 shrink-0 place-items-center border border-paper/30 font-display text-lg transition-all duration-300 group-hover:border-electric group-hover:bg-electric group-hover:text-paper ${open ? "collapsible-icon-open" : ""}`}
+            aria-hidden="true"
+          >
             +
           </span>
         </span>
       </button>
-      <div id={panelId} role="region" aria-labelledby={`${baseId}-title`} className={`collapsible-panel ${open ? "collapsible-panel-open" : ""}`}>
+      <div
+        id={panelId}
+        role="region"
+        aria-labelledby={`${baseId}-title`}
+        className={`collapsible-panel ${open ? "collapsible-panel-open" : ""}`}
+      >
         <div className="overflow-hidden">
           <div className="pt-10">{children}</div>
         </div>

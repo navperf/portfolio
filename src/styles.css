@@ -58,30 +58,56 @@
   --ring: oklch(0.49 0.3 266);
 }
 
-* { border-color: var(--border); }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--background); color: var(--foreground); letter-spacing: 0; }
-button, a { -webkit-tap-highlight-color: transparent; }
-button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outline-offset: 3px; }
+* {
+  border-color: var(--border);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  letter-spacing: 0;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--electric);
+  outline-offset: 3px;
+}
 
 .pill-nav {
   background: oklch(0.955 0.006 106 / 82%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid oklch(0.178 0 0 / 14%);
-  box-shadow: 0 8px 30px oklch(0.178 0 0 / 6%), 0 2px 8px oklch(0.178 0 0 / 4%);
-  transition: border-color 240ms ease, box-shadow 240ms ease;
+  box-shadow:
+    0 8px 30px oklch(0.178 0 0 / 6%),
+    0 2px 8px oklch(0.178 0 0 / 4%);
+  transition:
+    border-color 240ms ease,
+    box-shadow 240ms ease;
 }
 .pill-nav:hover {
   border-color: oklch(0.178 0 0 / 28%);
-  box-shadow: 0 10px 32px oklch(0.178 0 0 / 9%), 0 4px 12px oklch(0.178 0 0 / 5%);
+  box-shadow:
+    0 10px 32px oklch(0.178 0 0 / 9%),
+    0 4px 12px oklch(0.178 0 0 / 5%);
 }
 
 .pill-cta {
   background: var(--ink);
   color: var(--paper);
   box-shadow: 0 2px 8px oklch(0.178 0 0 / 16%);
-  transition: background-color 220ms ease, color 220ms ease, box-shadow 220ms ease, transform 200ms ease;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease,
+    transform 200ms ease;
 }
 .pill-cta:hover {
   background: var(--electric);
@@ -93,9 +119,14 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   transform: translateY(0) scale(0.97);
 }
 
-.contact-item { border-bottom: 1px solid var(--border); padding-block: 0.45rem; transition: color 180ms ease; }
-.contact-item:hover { color: var(--electric); }
-
+.contact-item {
+  border-bottom: 1px solid var(--border);
+  padding-block: 0.45rem;
+  transition: color 180ms ease;
+}
+.contact-item:hover {
+  color: var(--electric);
+}
 
 .hero-panel {
   position: relative;
@@ -110,10 +141,18 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   border-radius: 0;
   padding: 6.5rem 2.5rem 2.5rem;
   text-align: inherit;
-  transition: flex 650ms cubic-bezier(0.16, 1, 0.3, 1), opacity 400ms ease, box-shadow 400ms ease;
+  transition:
+    flex 650ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 400ms ease,
+    box-shadow 400ms ease;
 }
-.hero-panel-active { flex-grow: 1.18; }
-.hero-panel-idle { flex-grow: 0.82; opacity: 0.82; }
+.hero-panel-active {
+  flex-grow: 1.18;
+}
+.hero-panel-idle {
+  flex-grow: 0.82;
+  opacity: 0.82;
+}
 
 /* Dynamic width expansion on hover for desktop */
 @media (min-width: 768px) {
@@ -131,7 +170,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
 .hero-panel .hero-title,
 .hero-panel .hero-kicker,
 .hero-panel .hero-index {
-  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), color 300ms ease, opacity 300ms ease;
+  transition:
+    transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 300ms ease,
+    opacity 300ms ease;
 }
 
 /* @Personal Asymmetric Identity: Architectural Drafting Grid & Kinetic Glide */
@@ -141,7 +183,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   inset: 0;
   pointer-events: none;
   background-size: 28px 28px;
-  background-image: 
+  background-image:
     linear-gradient(to right, oklch(0.178 0 0 / 7%) 1px, transparent 1px),
     linear-gradient(to bottom, oklch(0.178 0 0 / 7%) 1px, transparent 1px);
   opacity: 0;
@@ -201,7 +243,11 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
 /* CV Pill Button inside Navigation Dock */
 .cv-pill-btn {
   box-shadow: 0 1px 3px oklch(0.178 0 0 / 8%);
-  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 180ms ease;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 180ms ease;
 }
 .cv-pill-btn:hover {
   background: var(--paper);
@@ -228,8 +274,21 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   }
 }
 
-.hero-index { position: absolute; top: 3.5rem; z-index: 10; font-family: var(--font-mono); font-size: 0.625rem; text-transform: uppercase; }
-.hero-kicker { margin-bottom: 1.25rem; display: block; font-family: var(--font-mono); font-size: 0.625rem; text-transform: uppercase; }
+.hero-index {
+  position: absolute;
+  top: 3.5rem;
+  z-index: 10;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+.hero-kicker {
+  margin-bottom: 1.25rem;
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
 .hero-title {
   display: block;
   font-family: var(--font-display);
@@ -241,27 +300,86 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   max-width: 100%;
 }
 
-.mode-button { min-width: 7rem; border: 0; border-radius: 0; background: transparent; padding: 0.7rem 1rem; color: var(--paper); font-family: var(--font-mono); font-size: 0.625rem; text-transform: uppercase; transition: background-color 180ms ease, color 180ms ease; }
-.mode-button-active-blue { background: #075056; }
-.mode-button-active-light { background: var(--paper); color: var(--ink); }
-.project-card { transition: background-color 180ms ease, color 180ms ease; }
-.project-card:hover { background: var(--paper); color: var(--ink); }
-.project-card:hover p, .project-card:hover span { color: currentColor; }
-.status { display: inline-block; min-width: 6.5rem; border: 1px solid oklch(0.955 0.006 106 / 35%); padding: 0.35rem 0.55rem; text-align: center; font-family: var(--font-mono); font-size: 0.5625rem; text-transform: uppercase; }
-.status-complete { background: var(--paper); color: var(--ink); }
-.work-reveal { animation: work-in 450ms cubic-bezier(0.19, 1, 0.22, 1) both; }
+.mode-button {
+  min-width: 7rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+.mode-button-active-blue {
+  background: #075056;
+}
+.mode-button-active-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+.project-card {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+.project-card:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+.project-card:hover p,
+.project-card:hover span {
+  color: currentColor;
+}
+.status {
+  display: inline-block;
+  min-width: 6.5rem;
+  border: 1px solid oklch(0.955 0.006 106 / 35%);
+  padding: 0.35rem 0.55rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  text-transform: uppercase;
+}
+.status-complete {
+  background: var(--paper);
+  color: var(--ink);
+}
+.work-reveal {
+  animation: work-in 450ms cubic-bezier(0.19, 1, 0.22, 1) both;
+}
 
-.collapsible-header { transition: color 300ms ease; }
+.collapsible-header {
+  transition: color 300ms ease;
+}
 .collapsible-panel {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.collapsible-panel > div { min-height: 0; }
-.collapsible-panel-open { grid-template-rows: 1fr; }
-.collapsible-icon { border-radius: 0; transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease, transform 400ms cubic-bezier(0.19, 1, 0.22, 1); }
-.collapsible-icon-open { transform: rotate(45deg); }
-.experience-row { position: relative; }
+.collapsible-panel > div {
+  min-height: 0;
+}
+.collapsible-panel-open {
+  grid-template-rows: 1fr;
+}
+.collapsible-icon {
+  border-radius: 0;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.collapsible-icon-open {
+  transform: rotate(45deg);
+}
+.experience-row {
+  position: relative;
+}
 .experience-row::before {
   content: "";
   position: absolute;
@@ -272,8 +390,12 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   transform-origin: top;
   transition: transform 350ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.experience-row:hover::before { transform: scaleY(1); }
-.cert-row td:first-child { position: relative; }
+.experience-row:hover::before {
+  transform: scaleY(1);
+}
+.cert-row td:first-child {
+  position: relative;
+}
 .cert-row td:first-child::before {
   content: "";
   position: absolute;
@@ -284,19 +406,52 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--electric); outl
   transform-origin: top;
   transition: transform 350ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.cert-row:hover td:first-child::before { transform: scaleY(1); }
+.cert-row:hover td:first-child::before {
+  transform: scaleY(1);
+}
 
-@keyframes work-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes work-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 767px) {
-  .hero-stage { flex-direction: column; min-height: 760px; }
-  .hero-panel { min-height: 348px; padding: 4.5rem 1.25rem 2rem; }
-  .hero-panel-active, .hero-panel-idle { flex-grow: 1; }
-  .hero-title { font-size: clamp(1.3rem, 6.2vw, 2.1rem); }
-  .hero-index { top: 2rem; }
+  .hero-stage {
+    flex-direction: column;
+    min-height: 760px;
+  }
+  .hero-panel {
+    min-height: 348px;
+    padding: 4.5rem 1.25rem 2rem;
+  }
+  .hero-panel-active,
+  .hero-panel-idle {
+    flex-grow: 1;
+  }
+  .hero-title {
+    font-size: clamp(1.3rem, 6.2vw, 2.1rem);
+  }
+  .hero-index {
+    top: 2rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
